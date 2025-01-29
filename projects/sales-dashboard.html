@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales KPI Dashboard - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">CJ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#blog">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <div class="container">
+            <h1 class="project-title">Sales KPI Dashboard</h1>
+            <p class="project-subtitle">An interactive dashboard built with Streamlit that visualizes key sales metrics and KPIs.</p>
+            <div class="project-links">
+                <a href="https://github.com/cameronjoejones/streamlit-sales-dashboard" target="_blank" class="project-link github">
+                    <i class="fab fa-github"></i>
+                    <span>View on GitHub</span>
+                </a>
+                <a href="https://medium.com/@cameronjosephjones/building-a-kpi-dashboard-in-streamlit-using-python-c88ac63903f5" target="_blank" class="project-link medium">
+                    <i class="fab fa-medium"></i>
+                    <span>Read Article</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Live Dashboard -->
+    <div class="dashboard-section">
+        <div class="container">
+            <h2 class="section-title text-center">Live Dashboard</h2>
+            <div class="dashboard-container-streamlit">
+                <iframe 
+                    src="https://cameronjoejones-streamlit-sales-dashboard-app-3pmk71.streamlit.app/?embed=true" 
+                    frameborder="0" 
+                    width="100%" 
+                    height="100%" 
+                    scrolling="yes"
+                    allowfullscreen="true"
+                >
+                    <p>Your browser does not support iframes.</p>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Content -->
+    <div class="project-content">
+        <div class="container">
+            <div class="project-section">
+                <h2>Overview</h2>
+                <p>This interactive dashboard provides real-time insights into sales performance metrics, helping stakeholders make data-driven decisions. Built using Streamlit and Python, it offers a user-friendly interface for exploring and analyzing sales data.</p>
+            </div>
+
+            <div class="project-section">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Real-time data updates and visualization</li>
+                    <li>Customizable views for different stakeholders</li>
+                    <li>Trend analysis and forecasting capabilities</li>
+                    <li>Interactive filters and drill-down options</li>
+                    <li>Automated report generation</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2>Technologies Used</h2>
+                <ul>
+                    <li>Python for data processing and analysis</li>
+                    <li>Streamlit for the web interface</li>
+                    <li>Pandas for data manipulation</li>
+                    <li>Plotly for interactive visualizations</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h2>Implementation</h2>
+                <p>The dashboard is implemented using a modular architecture that separates data processing, visualization, and user interface components. This approach ensures maintainability and makes it easy to add new features or modify existing ones.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/cameronjones08" target="_blank" class="mx-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/cameronjoejones" target="_blank" class="mx-2"><i class="fab fa-github"></i></a>
+                        <a href="https://medium.com/@cameronjosephjones" target="_blank" class="mx-2"><i class="fab fa-medium"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
