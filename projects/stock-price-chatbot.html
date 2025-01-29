@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sales KPI Dashboard - Portfolio</title>
+    <title>Stock Price AI Chatbot - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
@@ -39,14 +39,17 @@
     <header class="project-header">
         <div class="container">
             <h1 class="project-title">Stock Price AI Chatbot</h1>
-            <p class="project-subtitle">An intelligent chatbot powered by DeepSeek's language model that provides real-time stock market analysis and insights.
-                Features natural language queries, interactive charts, and historical data analysis.</p>
+            <p class="project-subtitle">An intelligent chatbot powered by DeepSeek's language model that provides real-time stock market analysis and insights through an interactive Streamlit interface.</p>
             <div class="project-links">
-                <a href="https://github.com/cameronjoejones/streamlit-sales-dashboard" target="_blank" class="project-link github">
+                <a href="https://github.com/cameronjoejones/DeepSeek-Stock-AI-Chatbot" target="_blank" class="project-link github">
                     <i class="fab fa-github"></i>
                     <span>View on GitHub</span>
                 </a>
-                <a href="https://medium.com/@cameronjosephjones" target="_blank" class="project-link medium">
+                <a href="https://deepseek-stock-ai-chatbot.streamlit.app/" target="_blank" class="project-link demo">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Live Demo</span>
+                </a>
+                <a href="https://medium.com/@cameronjosephjones/building-an-ai-chatbot-with-deepseek-and-streamlit-aec2bab82928?sk=93cbcb41de216aec48e5798a099974c4" target="_blank" class="project-link medium">
                     <i class="fab fa-medium"></i>
                     <span>Read Article</span>
                 </a>
@@ -54,59 +57,121 @@
         </div>
     </header>
 
-    <main class="project-detail">
 
-            <div class="project-content">
-                <section class="project-section">
-                    <h2>Overview</h2>
-                    <p>An intelligent chatbot powered by DeepSeek's language model that provides real-time stock market analysis and insights. Users can interact naturally with the AI to get stock prices, historical data, and market trends through an intuitive Streamlit interface.</p>
-                </section>
-
-                <section class="project-section">
-                    <h2>Key Features</h2>
-                    <ul>
-                        <li>Natural language processing for stock market queries using DeepSeek's advanced language model</li>
-                        <li>Real-time stock price data integration through financial APIs</li>
-                        <li>Interactive charts and visualizations powered by Streamlit</li>
-                        <li>Historical price analysis and trend identification</li>
-                        <li>User-friendly interface with conversation history</li>
-                        <li>Support for multiple stock exchanges and symbols</li>
-                    </ul>
-                </section>
-
-                <section class="project-section">
-                    <h2>Technical Implementation</h2>
-                    <ul>
-                        <li>Built with Python and Streamlit for the web interface</li>
-                        <li>Integrated DeepSeek's language model for natural language understanding</li>
-                        <li>Real-time data fetching using financial APIs</li>
-                        <li>Data visualization using Plotly and Streamlit charts</li>
-                        <li>Efficient caching system for improved performance</li>
-                        <li>Error handling and rate limiting for API calls</li>
-                    </ul>
-                </section>
-
-                <section class="project-section">
-                    <h2>Links</h2>
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/stock-price-chatbot" target="_blank" class="project-link github">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                        <a href="https://stock-price-chatbot.streamlit.app" target="_blank" class="project-link demo">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                    </div>
-                </section>
+    <!-- Live Dashboard -->
+    <div class="dashboard-section">
+        <div class="container">
+            <h2 class="section-title text-center">Live Dashboard</h2>
+            <div class="dashboard-container-streamlit">
+                <iframe 
+                    src="https://deepseek-stock-ai-chatbot.streamlit.app/?embed=true" 
+                    frameborder="0" 
+                    width="100%" 
+                    height="100%" 
+                    scrolling="yes"
+                    allowfullscreen="true"
+                >
+                    <p>Your browser does not support iframes.</p>
+                </iframe>
             </div>
+        </div>
+    </div>
+
+    <main class="project-detail">
+        <div class="container">
+            <section class="project-section">
+                <h2>Overview</h2>
+                <p>This project demonstrates how to build an AI-powered stock analysis chatbot using DeepSeek's language model, Python, and Streamlit. The chatbot provides real-time stock market insights and analysis through natural language interaction, making it easier for users to understand market trends and make informed decisions.</p>
+            </section>
+
+            <section class="project-section">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>AI-Powered Chat Interface: Natural language processing for stock market queries using DeepSeek's advanced language model</li>
+                    <li>Real-time Data Integration: Live stock price data through Financial Modeling Prep API</li>
+                    <li>Interactive Visualization: Candlestick charts showing 5 months of historical price data</li>
+                    <li>KPI Metrics: Track current price, highs, lows, and volume</li>
+                    <li>Multi-Stock Support: Analysis for popular stocks like AAPL, TSLA, and NVDA</li>
+                    <li>Prebuilt Example Prompts: Suggested questions for quick analysis</li>
+                </ul>
+            </section>
+
+            <section class="project-section">
+                <h2>Technical Implementation</h2>
+                <div class="mb-4">
+                    <h3>Project Structure</h3>
+                    <pre><code>📂 Stock-AI-Chatbot/  
+├── 📄 api.py          # API interactions  
+├── 📄 app.py          # Streamlit app 
+├── 📂 .streamlit/  
+│   └── 📄 secrets.toml  # To store API keys
+└── 📄 Pipfile         # package management</code></pre>
+                </div>
+
+                <div class="mb-4">
+                    <h3>Core Components</h3>
+                    <ul>
+                        <li><strong>Frontend (Streamlit):</strong> Interactive web interface with stock selection, candlestick charts, and chat functionality</li>
+                        <li><strong>AI Integration (DeepSeek):</strong> Natural language processing for analyzing stock data and generating insights</li>
+                        <li><strong>Data Source (Financial Modeling Prep):</strong> Real-time and historical stock price data</li>
+                        <li><strong>Data Visualization (Plotly):</strong> Interactive candlestick charts and technical indicators</li>
+                    </ul>
+                </div>
+
+                <div class="mb-4">
+                    <h3>Key Technologies</h3>
+                    <ul>
+                        <li>Python for backend development and data processing</li>
+                        <li>Streamlit for creating the web interface</li>
+                        <li>DeepSeek's language model for AI-powered analysis</li>
+                        <li>Financial APIs for real-time market data</li>
+                        <li>Plotly for interactive data visualization</li>
+                        <li>Pandas for data manipulation and analysis</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2>Development Process</h2>
+                <ol>
+                    <li><strong>Environment Setup:</strong> Configuration of development environment and required dependencies</li>
+                    <li><strong>API Integration:</strong> Implementation of stock data fetching and AI model integration</li>
+                    <li><strong>Frontend Development:</strong> Creation of an intuitive user interface with Streamlit</li>
+                    <li><strong>Data Visualization:</strong> Implementation of interactive charts and metrics display</li>
+                    <li><strong>Testing & Optimization:</strong> Comprehensive testing and performance optimization</li>
+                    <li><strong>Deployment:</strong> Deployment to Streamlit Cloud for public access</li>
+                </ol>
+            </section>
+
+            <section class="project-section">
+                <h2>Future Enhancements</h2>
+                <ul>
+                    <li>Integration of fundamental data (earnings, revenue) for deeper analysis</li>
+                    <li>Advanced technical indicators and pattern recognition</li>
+                    <li>Portfolio tracking and management features</li>
+                    <li>Enhanced AI capabilities using chain-of-thought reasoning</li>
+                    <li>Support for cryptocurrency and forex markets</li>
+                </ul>
+            </section>
         </div>
     </main>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer py-4">
         <div class="container">
-            <p>&copy; 2025 Cameron Jones. All rights reserved.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/cameronjones08" target="_blank" class="mx-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/cameronjoejones" target="_blank" class="mx-2"><i class="fab fa-github"></i></a>
+                        <a href="https://medium.com/@cameronjosephjones" target="_blank" class="mx-2"><i class="fab fa-medium"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../script.js"></script>
 </body>
 </html>
