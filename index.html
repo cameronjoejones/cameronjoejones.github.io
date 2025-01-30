@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Cameron Jones - Data Analyst Portfolio showcasing expertise in data visualization, analytics, and business intelligence. Based in London, UK.">
+    <meta name="keywords" content="data analyst, data visualisation, analytics, Cameron Jones, London, TikTok, HelloFresh, Tableau, Python, SQL">
 </head>
 <body>
     <!-- Navigation -->
@@ -184,10 +186,16 @@
     <section class="py-5" id="projects">
         <div class="container">
             <h2 class="section-title text-center mb-5">Featured Projects</h2>
+            <div class="project-filters text-center mb-4">
+                <button class="btn btn-outline-light active" data-filter="all">All</button>
+                <button class="btn btn-outline-light" data-filter="python">Python</button>
+                <button class="btn btn-outline-light" data-filter="visualisation">Data Visualisation</button>
+                <button class="btn btn-outline-light" data-filter="analysis">Analysis</button>
+            </div>
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="card">
-                        <img src="images/stock-chatbot-preview.png" class="card-img-top" alt="Stock Price AI Chatbot">
+                        <img src="images/stock-chatbot-preview.png" class="card-img-top" alt="Stock Price AI Chatbot" loading="lazy">
                         <div class="card-body">
                             <h3 class="card-title">Stock Price AI Chatbot</h3>
                             <p class="card-text">
@@ -206,8 +214,7 @@
                                     <span>View Project</span>
                                 </a>
 
-                                <!-- todo: change this link -->
-                                <a href="https://medium.com/@cameronjosephjones" target="_blank" class="card-link">
+                                <a href="https://medium.com/@cameronjosephjones/ai-stock-analysis-chatbot-using-deepseek-python-streamlit-and-apis-56db01244212?sk=d3aeddf248f0048917641c1c3fdf6dbe" target="_blank" class="card-link">
                                     <i class="fab fa-medium"></i>
                                     <span>Read Article</span>
                                 </a>
@@ -215,6 +222,37 @@
                         </div>
                     </div>
                 </div>
+
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="images/tableau-sales-dashboard-preview.png" class="card-img-top" alt="Tableau Sales KPI Dashboard">
+                        <div class="card-body">
+                            <h3 class="card-title">Sales KPI Dashboard (Tableau)</h3>
+                            <p class="card-text">
+                                A comprehensive sales performance dashboard built with Tableau, featuring real-time metrics, 
+                                geographic visualizations, and interactive filters for deep business insights.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="badge">Tableau</span>
+                                <span class="badge">Data Visualisation</span>
+                                <span class="badge">Analytics</span>
+                                <span class="badge">SQL</span>
+                            </div>
+                            <div class="card-links">
+                                <a href="projects/tableau-sales-dashboard.html" class="card-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>View Project</span>
+                                </a>
+                                <!-- <a href="https://medium.com/@cameronjosephjones/building-effective-sales-dashboards-in-tableau-a-comprehensive-guide-xxxxx" target="_blank" class="card-link">
+                                    <i class="fab fa-medium"></i>
+                                    <span>Read Article</span>
+                                </a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-md-6">
                     <div class="card">
                         <img src="images/sales-dashboard-preview.png" class="card-img-top" alt="Sales KPI Dashboard">
@@ -228,7 +266,7 @@
                                 <span class="badge">Python</span>
                                 <span class="badge">Streamlit</span>
                                 <span class="badge">Pandas</span>
-                                <span class="badge">Data Visualization</span>
+                                <span class="badge">Data Visualisation</span>
                             </div>
                             <div class="card-links">
                                 <a href="projects/sales-dashboard.html" class="card-link">
@@ -256,6 +294,7 @@
                                 <span class="badge">Python</span>
                                 <span class="badge">Tableau</span>
                                 <span class="badge">Data Analysis</span>
+                                <span class="badge">Data Visualisation</span>
                                 <span class="badge">GIS</span>
                             </div>
                             <div class="card-links">

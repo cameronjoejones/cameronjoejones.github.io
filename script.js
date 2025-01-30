@@ -66,3 +66,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Project filtering
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const projectCards = document.querySelectorAll('.col-md-6');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filterValue = button.getAttribute('data-filter');
+            
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            projectCards.forEach(card => {
+                const projectTags = card.querySelector('.tech-stack').innerText.toLowerCase();
+                if (filterValue === 'all' || projectTags.includes(filterValue.toLowerCase())) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});

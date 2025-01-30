@@ -225,6 +225,24 @@ body {
     margin: 0;
 }
 
+/* .skill-progress {
+    margin-top: 1rem;
+}
+
+.progress {
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 0.8rem;
+    border-radius: 4px;
+}
+
+.progress-bar {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0 0.5rem;
+} */
+
 /* Project Cards */
 .card {
     background: var(--card-bg);
