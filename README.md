@@ -19,5 +19,8 @@ To run this site locally:
 1. Clone the repository
 2. Open `index.html` in your browser
 
+## Running on Localhost
+1. Run `python3 -m http.server 8000`
+
 ## Contact
 Feel free to reach out for collaborations or opportunities
